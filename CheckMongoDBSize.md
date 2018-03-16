@@ -14,4 +14,7 @@ db.stat()<br>
 > db.stat(1024*1024)<br>
 
 ## 查看MongoDB数据库中某个集合的大小
-> db.collectionName.stats()
+> db.collectionName.stats() <br>
+
+或者<br>
+db.collectionName.storageSize();
