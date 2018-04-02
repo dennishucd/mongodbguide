@@ -13,6 +13,11 @@ db.getCollection('collectionName').find().sort({fieldName:-1}).limit(10)<br>
 
 ## MongoDB修改数据<br>
 ## MongoDB删除数据<br>
+**删除某个集合的所有数据**<br>
+db.collectionName.remove({})<br>
+检查是否已成功删除<br>
+db.collectionName.find({}).count()
+
 ### 清空某个集合的所有记录
 > db.collectionName.remove({}); # 这类似MySQL中的truncate命令。
 
