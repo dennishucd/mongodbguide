@@ -13,12 +13,10 @@ db.getCollection('collectionName').find().sort({fieldName:-1}).limit(10)<br>
 
 ## MongoDB修改数据<br>
 ## MongoDB删除数据<br>
-**删除某个集合的所有数据**<br>
-db.collectionName.remove({})<br>
-检查是否已成功删除<br>
-db.collectionName.find({}).count()
 
-### 清空某个集合的所有记录
-> db.collectionName.remove({}); # 这类似MySQL中的truncate命令。
+**清空某个集合的所有记录** <br>
+> db.collectionName.remove({}); # 这类似MySQL中的truncate命令。<br>
+> db.collectionName.find({}).count() #  检查是否已成功删除<br>
 
-### 删除满足指定条件的记录<br>
+**删除满足指定条件的记录** <br>
+> db.collectionNam.remove({'collect_date':{$gt:new Date(2018,2)}})
