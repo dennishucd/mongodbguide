@@ -2,8 +2,8 @@
 
 ## MongoDB备份
 
-mongodump
+mongodump -h hostname:port -d databaseName -o /backup/to/path/ -u userName -p password
 
 ## MongoDB还原
-Restore
+mongorestore -h hostname:port -d databaseName --dir /backup/to/path/ -u userName -p password
 
