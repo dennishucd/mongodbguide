@@ -13,8 +13,11 @@ db.getCollection('collectionName').find().sort({fieldName:-1}).limit(10)<br>
 
 ## MongoDB修改数据<br>
 **修改某个集合中的某个字段的值** <br>
-db.collectionName.update({'md5_code':'5eb594d6cacca705fac976e96704d1b1'}, {$set:{'status':NumberInt(0)}})<br>
-注意：mongodb将数字默认为double类型，由于本例中的status为Int32，因此需要加转换，否则字段类型会被改变。<br>
+db.collectionName.update({'md5_code':'5eb594d6cacca705fac976e96704d1b1'}, {$set:{'status':NumberInt(0)}}, {multi:true})<br>
+注意：<br>
+[1] mongodb将数字默认为double类型，由于本例中的status为Int32，因此需要加转换，否则字段类型会被改变。<br>
+[2] mongodb默认只更新找到的第一条记录，如果增加muliti参数为true,就把按条件查出来多条记录全部更新。<br>
+参考：http://www.runoob.com/mongodb/mongodb-update.html<br>
 
 ## MongoDB删除数据<br>
 
