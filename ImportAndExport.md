@@ -18,3 +18,6 @@
 **使用示例：**
 mongoexport -h39.108.65.1 -ufxdt -pzhanGW -dood_cloud -cwm_shop_ -fsid,certificate --type=csv -o cert.csv
 
+### 带有查询条件的导出
+语法：在前面的基础上增加--query JSONString即可。示例如下：<br>
+mongoexport -h39.108.65.1 -ufxdt -pzhanGW -dood_cloud -cwm_shop_ -fsid,certificate --query "{'md5_code': '00004492a07eb4240bedfe14f46d9af7'}" --type=csv -o cert.csv
